@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('campaigns', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->float('total_budget', 2, 2);
+            $table->float('daily_budget');
             $table->timestamps();
         });
     }
