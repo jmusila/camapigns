@@ -25,8 +25,8 @@ class CreateCampaignRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string'],
-            'total_budget' => ['required', 'float'],
-            'daily_budget' => ['required', 'float'],
+            'total_budget' => ['required',],
+            'daily_budget' => ['required',],
         ];
     }
 }

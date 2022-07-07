@@ -9,6 +9,8 @@ class Campaign extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     public function campaignImages()
     {
         return $this->hasMany(CampaignImage::class);

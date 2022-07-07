@@ -19,6 +19,7 @@ Route::group(['prefix' => 'v1/'], function () {
     Route::group(['prefix' => 'campaigns'], function () {
         Route::controller(CampaignController::class)->group(function () {
             Route::get('list/all', 'index');
+            Route::post('save', 'store');
         });
     });
 });
