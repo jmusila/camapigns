@@ -20,6 +20,8 @@ class CampaignResource extends JsonResource
             'total_budget' => $this->total_budget,
             'daily_budget' => $this->daily_budget,
             'campaign_images' => new CampaignImagesResource($this->whenLoaded('campaignImages')),
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at,
         ];
     }
 }

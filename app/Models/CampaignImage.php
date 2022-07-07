@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class CampaignImage extends Model
 {
     use HasFactory;
+
+    protected $quarded = [];
 }
