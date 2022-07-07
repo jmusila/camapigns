@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('campaign_campaign_image', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->integer('campaign_id');
+            $table->integer('campaign_image_id');
         });
     }
 
