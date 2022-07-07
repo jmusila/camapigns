@@ -13,6 +13,6 @@ class Campaign extends Model
 
     public function campaignImages()
     {
-        return $this->hasMany(CampaignImage::class);
+        return $this->belongsToMany(CampaignImage::class);
     }
 }
