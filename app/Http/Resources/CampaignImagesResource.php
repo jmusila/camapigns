@@ -18,7 +18,6 @@ class CampaignImagesResource extends JsonResource
             'id' => $this->id,
             'image_name' => $this->image_name,
             'image_link' => $this->link,
-            'campaign_id' => $this->campaign_id,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];

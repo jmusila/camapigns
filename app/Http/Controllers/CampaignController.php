@@ -16,7 +16,10 @@ class CampaignController extends Controller
 
     public function store(CreateCampaignRequest $request)
     {
-        return new CampaignResource(Campaign::create($request->validated()));
-        // return new CampaignResource(Campaign::create($request->validated())->campaignImages()->sync($request->campaign_images));
+        $campaign = Campaign::create($request->validated());
+
+        $campaign->campaignImages()->sync($request->campaign_images);
+
+        return new CampaignResource($campaign->load('campaignImages'));
     }
 }
