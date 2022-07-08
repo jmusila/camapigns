@@ -14,10 +14,10 @@ return new class extends Migration {
     {
         Schema::create('campaign_images', function (Blueprint $table) {
             $table->id();
-            $table->integer('file_id');
+            $table->unsignedBigInteger('file_id');
             $table->foreign('file_id')->references('id')->on('file_uploads');
 
-            $table->integer('campaign_id');
+            $table->unsignedBigInteger('campaign_id');
             $table->foreign('campaign_id')->references('id')->on('campaigns');
             
             $table->timestamps();

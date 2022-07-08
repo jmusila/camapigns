@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CampaignController;
+use App\Http\Controllers\FileUploadController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +21,12 @@ Route::group(['prefix' => 'v1/'], function () {
         Route::controller(CampaignController::class)->group(function () {
             Route::get('list/all', 'index');
             Route::post('save', 'store');
+        });
+    });
+
+    Route::group(['prefix' => 'files'], function () {
+        Route::controller(FileUploadController::class)->group(function () {
+            Route::post('save', '__invoke');
         });
     });
 });
