@@ -10,4 +10,9 @@ class CampaignImage extends Model
     use HasFactory;
 
     protected $quarded = [];
+
+    public function campaign()
+    {
+        return $this->belongsTo(Campaign::class);
+    }
 }
