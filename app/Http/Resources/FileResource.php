@@ -20,6 +20,8 @@ class FileResource extends JsonResource
             'file_link' => $this->file_link,
             'file_size' => $this->file_size,
             'file_type' => $this->file_type,
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at,
         ];
     }
 }

@@ -9,10 +9,15 @@ class CampaignImage extends Model
 {
     use HasFactory;
 
-    protected $quarded = [];
+    protected $guarded = [];
 
     public function campaign()
     {
         return $this->belongsTo(Campaign::class);
+    }
+
+    public function files()
+    {
+        return $this->hasMany(FileUpload::class);
     }
 }

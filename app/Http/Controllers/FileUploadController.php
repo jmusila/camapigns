@@ -11,8 +11,6 @@ class FileUploadController extends Controller
 {
     public function __invoke(CreateFileRequest $request)
     {
-        $file = new FileUpload($request->validated());
-
-        return new FileResource($file);
+        return new FileResource(FileUpload::create($request->validated()));
     }
 }

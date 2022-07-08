@@ -15,4 +15,14 @@ class Campaign extends Model
     {
         return $this->hasMany(CampaignImage::class);
     }
+
+    public static function saveImages($campaign)
+    {
+        if (request()->has('campaign_images')) {
+            return collect(request()->campaign_images)->map( fn ($image) => CampaignImage::create([
+                'file_id' => $image, 
+                'campaign_id' => $campaign->id
+            ]));
+        }
+    }
 }

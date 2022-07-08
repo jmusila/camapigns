@@ -16,8 +16,8 @@ class CampaignImagesResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'image_name' => $this->image_name,
-            'image_link' => $this->link,
+            'file_id' => $this->file_id,
+            'campaign_id' => $this->campaign_id,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];

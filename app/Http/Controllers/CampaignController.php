@@ -18,7 +18,7 @@ class CampaignController extends Controller
     {
         $campaign = Campaign::create($request->validated());
 
-        $campaign->campaignImages()->sync($request->campaign_images);
+        Campaign::saveImages($campaign);
 
         return new CampaignResource($campaign->load('campaignImages'));
     }
